@@ -7,7 +7,7 @@ namespace MyCash.Models
     {
         [Key]
         [Required]
-        public int IncomeId { get; set; }
+        public int Id { get; set; }
         [Required(ErrorMessage = "Este campo é obrigatório!")]
         [Display(Name = "Descrição")]
         public string Description { get; set; }
