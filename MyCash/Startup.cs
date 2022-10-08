@@ -35,6 +35,7 @@ namespace MyCash
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyCash", Version = "v1" });
             });
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
