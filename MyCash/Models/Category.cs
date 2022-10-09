@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace MyCash.Models
@@ -20,5 +21,9 @@ namespace MyCash.Models
         [Required(ErrorMessage = "Este campo é obrigatório!")]
         [Display(Name = "Data de Criação")]
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        public virtual List<Income> Incomes { get; set; }
+
+        public virtual List<Expense> Expenses { get; set; }
     }
 }
