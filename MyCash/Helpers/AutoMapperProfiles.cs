@@ -12,15 +12,15 @@ namespace MyCash.Helpers
         {
             //Income Mapping
             CreateMap<IncomeCreateDTO, Income>();
-            CreateMap<IncomeReadDTO, IncomeCreateDTO>();
+            CreateMap<Income, IncomeReadDTO>();
 
             //Expense Mapping
             CreateMap<ExpenseCreateDTO, Expense>();
-            CreateMap<ExpenseReadDTO, ExpenseCreateDTO>();
+            CreateMap<Expense, ExpenseReadDTO>();
 
             //Category Mapping
             CreateMap<CategoryCreateDTO, Category>();
-            CreateMap<CategoryReadDTO, CategoryCreateDTO>();
+            CreateMap<Category, CategoryReadDTO>();
         }
     }
 }

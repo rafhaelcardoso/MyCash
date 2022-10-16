@@ -13,6 +13,8 @@ namespace MyCash.Data.Dtos.ExpenseDTO
         [Display(Name = "Valor")]
         public decimal Amount { get; set; }
 
+        public int CategoryId { get; set; } = 8;
+
         [Required(ErrorMessage = "Este campo é obrigatório!")]
         [Display(Name = "Data")]
         public DateTime Date { get; set; }

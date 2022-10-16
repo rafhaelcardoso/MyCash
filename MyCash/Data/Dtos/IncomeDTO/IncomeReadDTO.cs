@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MyCash.Models;
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace MyCash.Data.Dtos.IncomeDTO
 {
@@ -16,6 +18,11 @@ namespace MyCash.Data.Dtos.IncomeDTO
         [Required(ErrorMessage = "Este campo é obrigatório!")]
         [Display(Name = "Valor")]
         public decimal Amount { get; set; }
+
+        [JsonIgnore]
+        public virtual Category Category { get; set; }
+
+        public int CategoryId { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório!")]
         [Display(Name = "Data")]
